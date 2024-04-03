@@ -1,0 +1,23 @@
+@use "../foundation/var" as *;
+/* ! ==================================================
+- ボディ
+================================================== */
+.l-body {
+  padding: 0 !important;
+  ::-webkit-scrollbar{
+    background-color: var(--bg_light);
+    border-radius: 2px;
+    height: 10px;
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track{
+      border-radius: 2px;
+      height: 6px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: var(--primary-dark);
+    border-radius: 2px;
+    height: 6px;
+  }
+}
+

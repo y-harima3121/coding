@@ -1,0 +1,18 @@
+@use "../foundation/breakpoints" as *;
+@use "../foundation/var" as *;
+.l-main{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  flex:auto;
+  min-width:1px;
+  overflow: auto;
+  height: 100vh;
+}
+.l-body.aside__narrow{
+  .l-main{
+    @include breakpoints (xl){
+      padding: 0 0 0 64px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../foundation/breakpoints" as *;
+/* ! ==================================================
+- ヘッダー
+================================================== */
+.l-header {
+	width: 100%;
+	padding:8px 24px;
+	height: 50px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	@include breakpoints (md){
+		height: 40px;
+		padding:8px 16px;
+	}
+	.c-logoArea{
+		display:block;
+		&:hover{
+			opacity: .7;
+		}
+		.c-logo{
+			height:1rem;
+			display:block;
+			@include breakpoints (sm){
+				height:1.5rem;
+			}
+		}
+	}
+}

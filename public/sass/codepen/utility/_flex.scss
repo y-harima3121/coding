@@ -1,0 +1,53 @@
+/* ——————————————————————————————————————————————————————————————
+flex
+—————————————————————————————————————————————————————————————— */
+@use "../foundation/breakpoints" as *;
+.u-flex{
+  display:flex;
+}
+.u-auto{
+  flex: auto;
+}
+.u-align {
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  gap: 0.5rem;
+  @include breakpoints (xl){
+    gap: 1rem
+  }
+  // 縦並び
+  &--horizontal {
+    @extend .u-align;
+    flex-direction: column;
+  }
+  // 中央よせ
+  &--center {
+    @extend .u-align;
+    justify-content: center;
+  }
+  &--start {
+    @extend .u-align;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  // ボタン用右よせ
+  &--end {
+    @extend .u-align;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  &--bottom {
+    @extend .u-align;
+    align-items: flex-end;
+  }
+  .f-item{
+    margin:0;
+  }
+}
+.between{
+  justify-content: space-between;
+}
+.nowrap{
+  flex-wrap: nowrap;
+}

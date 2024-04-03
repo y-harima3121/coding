@@ -1,0 +1,24 @@
+@use "../foundation/breakpoints" as *;
+/* ——————————————————————————————————————————————————————————————
+br
+—————————————————————————————————————————————————————————————— */
+/* 指定のワイド以上でON */
+.on{
+  display: block;
+  &_pcWide{display:none; @include breakpoints (xl4){display:block;}}
+  &_pc{display:none; @include breakpoints (xl3){display:block;}}
+  &_note{display:none; @include breakpoints (xl2){display:block;}}
+  &_tabletWide{display:none; @include breakpoints (xl){display:block;}}
+  &_tablet{display:none; @include breakpoints (md){display:block;}}
+  &_spWide{display:none; @include breakpoints (sm){display:block;}}
+}
+ /* 指定のワイド以上でOFF */
+ .off{
+  display:none;
+  &_pcWide{ @include breakpoints (xl4){display:none;}}
+  &_pc{ @include breakpoints (xl3){display:none;}}
+  &_note{ @include breakpoints (xl2){display:none;}}
+  &_tabletWide{ @include breakpoints (xl){display:none;}}
+  &_tablet{ @include breakpoints (md){display:none;}}
+  &_spWide{ @include breakpoints (sm){display:none;}}
+}

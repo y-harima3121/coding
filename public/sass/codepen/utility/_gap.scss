@@ -1,0 +1,34 @@
+@use "../foundation/breakpoints" as *;
+/* ——————————————————————————————————————————————————————————————
+gap
+—————————————————————————————————————————————————————————————— */
+.u-gap4{
+  gap: .25rem;
+}
+.u-gap8{
+  gap: .5rem;
+}
+.u-gap16{
+  gap: .5rem;
+  @include breakpoints(sm) {
+    gap: 1rem;
+  }
+}
+.u-gap24{
+  gap: .75rem;
+  @include breakpoints(sm) {
+    gap: 1.5rem;
+  }
+}
+.u-gap32{
+  gap: 1rem;
+  @include breakpoints(sm) {
+    gap: 2rem;
+  }
+}
+.u-gap40{
+  gap: 1.5rem;
+  @include breakpoints(sm) {
+    gap: 2.5rem;
+  }
+}

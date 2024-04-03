@@ -1,0 +1,90 @@
+@use "../foundation/breakpoints" as *;
+%l-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width:100%;
+}
+.l-grid{
+  @extend %l-grid;
+  &--2{
+    @extend %l-grid;
+    @include breakpoints (md){
+      grid-template-columns: 1fr 1fr;
+    }
+    &_1{
+      @extend %l-grid;
+      @include breakpoints (md){
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  }
+  &--3{
+    @extend %l-grid;
+    @include breakpoints (sm){
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoints (md){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &--4{
+    @extend %l-grid;
+    grid-template-columns: 1fr 1fr;
+    @include breakpoints (md){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include breakpoints (lg){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  &--5{
+    @extend %l-grid;
+    grid-template-columns: 1fr 1fr;
+    @include breakpoints (md){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include breakpoints (lg){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @include breakpoints (xl2){
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+  &--gap8{
+    gap: .5rem;
+  }
+  &--gap24{
+    gap: 1.5rem;
+  }
+  &--gap32{
+    gap: 2rem;
+  }
+  &--gap40{
+    gap: 2.5rem;
+  }
+  &--item{
+    display:flex;
+    flex-direction: column;
+    min-width: 1px;
+    &__head{
+      display:flex;
+      flex-wrap:wrap;
+      margin-bottom: 1.5rem;
+    }
+    &__body{
+      flex: auto;
+    }
+    &__foot{
+      margin-top: 1.5rem;
+      display:flex;
+      justify-content: flex-end;
+    }
+  }
+}
+.align-center{
+  align-items:center;
+}
+.justify-center{
+  justify-items:center;
+}
