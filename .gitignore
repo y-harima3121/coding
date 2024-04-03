@@ -17,6 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/docker/db/mysql/volumes
-/docker/web/nginx/volumes
+docker/db/mysql/volumes
+docker/web/nginx/volumes
 docker-compose.yml
