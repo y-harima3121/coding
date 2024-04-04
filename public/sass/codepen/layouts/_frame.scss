@@ -10,10 +10,10 @@
 .p-frame{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: unquote('max(100px)') 1fr;
+  // grid-template-rows: unquote('max(100px)') 1fr;
   height: 100%;
   @include breakpoints (sm){
-    grid-template-rows: unquote('max(80px)') 1fr;
+    // grid-template-rows: unquote('max(80px)') 1fr;
   }
   &__head{
     min-width: 1px;
