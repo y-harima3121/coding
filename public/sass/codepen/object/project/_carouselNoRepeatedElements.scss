@@ -89,7 +89,7 @@
         flex: auto;
     }
     &__scene{
-        --buff: 6rem;
+        --buff: 3rem;
         height: 100%;
         width: 100%;
         mask:
@@ -138,12 +138,12 @@
                 position: absolute;
                 inset: 4px 4px -2px -2px;
                 border-radius: 6px;
-                background: hsl(0 0% 0% / 0.1);
+                background: hsl(0 0% 0% / 0.01);
                 filter: blur(calc(var(--active, 0) * 8px));
                 z-index: -1;
                 transition: scale var(--transition), opacity var(--transition), translate var(--transition), filter var(--transition);
                 transform-origin: 50% 0;
-                scale: 1 calc(1 + (var(--active, 0) * 0.05));
+                scale: 1 calc(1 + (var(--active, 0) * 0.01));
                 --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
                 box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow); 
                 .item {
@@ -201,9 +201,6 @@
         }
         &__head{
             grid-template: auto 1fr / 1fr;
-        }
-        &__scene{
-            --buff: 3rem;
         }
         &__grid{
             --count: 8;
