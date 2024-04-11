@@ -81,6 +81,11 @@
 		color:var(--txt-link);
 		border-bottom: 1px dotted;
     padding:0 2px;
+		
+		// 追加
+		border: none;
+		text-decoration: underline;
+		margin: 1rem;
 		svg{
 			fill:var(--txt-link);
 		}
